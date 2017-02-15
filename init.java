@@ -263,19 +263,19 @@ public class init extends JFrame implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_Z) {
+        if((e.getKeyCode() == KeyEvent.VK_Z || e.getKeyCode() == KeyEvent.VK_UP) && plateform[yPacman-1][xPacman] == 0)  {
             //System.out.println("UP !");
             dirPacman = NORTH;
         }
-        else if(e.getKeyCode() == KeyEvent.VK_D) {
+        else if((e.getKeyCode() == KeyEvent.VK_D || e.getKeyCode() == KeyEvent.VK_RIGHT) && plateform[yPacman][xPacman+1] == 0) {
             //System.out.println("RIGHT !");
             dirPacman = EAST;
         }
-        else if(e.getKeyCode() == KeyEvent.VK_S) {
+        else if((e.getKeyCode() == KeyEvent.VK_S || e.getKeyCode() == KeyEvent.VK_DOWN) && plateform[yPacman+1][xPacman] == 0) {
             //System.out.println("DOWN !");
             dirPacman = SOUTH;
         }
-        else if(e.getKeyCode() == KeyEvent.VK_Q) {
+        else if((e.getKeyCode() == KeyEvent.VK_Q || e.getKeyCode() == KeyEvent.VK_LEFT) && plateform[yPacman][xPacman-1] == 0) {
             //System.out.println("LEFT !");
             dirPacman = WEST;
         }
